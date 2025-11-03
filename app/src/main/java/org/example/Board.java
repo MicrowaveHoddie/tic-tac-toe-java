@@ -78,4 +78,15 @@ public class Board {
             if (i < 2) System.out.println("-----------");
         }
     }
+
+    public void newboard() { //didn't forget about it this time. (Deleted it by acc. whoops!)
+        cells.clear();
+        for (int i = 0; i < 3; i++) {
+            List<String> row = new ArrayList<>();
+            for (int j = 1; j <= 3; j++) {
+                row.add(String.valueOf(i * 3 + j));
+            }
+            cells.add(row);
+        }
+    }
 }
