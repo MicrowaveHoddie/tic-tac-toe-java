@@ -51,13 +51,9 @@ public class Board {
             return true;
         }
 
-        if (cells.get(0).get(2).equals(mark) &&
+        return cells.get(0).get(2).equals(mark) &&
                 cells.get(1).get(1).equals(mark) &&
-                cells.get(2).get(0).equals(mark)) {
-            return true;
-        }
-
-        return false;
+                cells.get(2).get(0).equals(mark);
     }
 
     public boolean isFull() {
@@ -89,4 +85,18 @@ public class Board {
             cells.add(row);
         }
     }
+
+    public char[] getCells() {
+        char[] flat = new char[9];
+
+        int index = 0;
+        for (List<String> row : cells) {
+            for (String cell : row) {
+                flat[index++] = cell.charAt(0);
+            }
+        }
+
+        return flat;
+    }
+
 }
