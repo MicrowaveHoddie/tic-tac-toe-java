@@ -29,3 +29,14 @@ You can run the app using:
 ```
 
 The two flags passed to the `run` command hide the noisy output from Gradle. You can see the details from Gradle by omitting those flags.
+
+
+## Due Note
+
+Incase of failure when saving score data, make sure you have the following folder setup: 
+
+```bash
+\{ROOT}\app\src\main\resources
+```
+
+Sometimes the resources folder is not cloned from the rep. Data will be saved here in a `.txt`.
